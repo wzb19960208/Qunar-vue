@@ -4,7 +4,7 @@
     <home-header></home-header>
     <!--使用swiper组件-->
     <home-swiper></home-swiper>
-    <p>test</p>
+    <home-icons></home-icons>
   </div>
 </template>
 
@@ -13,10 +13,11 @@
   import HomeHeader from './components/Header'
   // 引入swiper组件,省略了.vue
   import HomeSwiper from './components/Swiper'
+  import HomeIcons from './components/Icons'
 export default {
   name: 'App',
   // 引入header组件,swiper组件
-  components: {HomeHeader,HomeSwiper}
+  components: {HomeHeader,HomeSwiper,HomeIcons}
 }
 </script>
 
