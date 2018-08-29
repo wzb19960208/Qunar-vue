@@ -18,18 +18,16 @@
 <script>
   export default{
     name : 'HomeSwiper',
+    props:{
+      swiperList:Array
+    },
     // es6写法
     data(){
       return {
         swiperOption :{
           pagination : '.swiper-pagination',
           loop : true
-        },
-        swiperList : [
-          {id:'01',imgUrl:'http://img1.qunarzz.com/piao/fusion/1808/59/0f1081cd8d155702.jpg_750x200_b78fcf48.jpg'},
-          {id:'02',imgUrl:'http://img1.qunarzz.com/piao/fusion/1808/26/16b22c607cdddb02.png_750x200_965508d9.png'},
-          {id:'03',imgUrl:'http://img1.qunarzz.com/piao/fusion/1808/57/d3a8edda0e968402.jpg_750x200_65f02b29.jpg'}
-          ]
+        }
       }
     }
   }

@@ -9,7 +9,7 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-right">
-      城市
+      {{this.city}}
       <i class="iconfont">&#xe64a;</i>
     </div>
   </div>
@@ -18,7 +18,10 @@
 <!--定义组件名-->
 <script>
   export default {
-    name: 'HomeHeader'
+    name: 'HomeHeader',
+    props:{
+      city:String
+    }
   }
 </script>
 
