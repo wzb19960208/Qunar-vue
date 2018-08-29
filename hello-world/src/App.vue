@@ -5,6 +5,7 @@
     <!--使用swiper组件-->
     <home-swiper></home-swiper>
     <home-icons></home-icons>
+    <home-recommend></home-recommend>
   </div>
 </template>
 
@@ -14,10 +15,11 @@
   // 引入swiper组件,省略了.vue
   import HomeSwiper from './components/Swiper'
   import HomeIcons from './components/Icons'
+  import HomeRecommend from './components/Recommend'
 export default {
   name: 'App',
   // 引入header组件,swiper组件
-  components: {HomeHeader,HomeSwiper,HomeIcons}
+  components: {HomeHeader,HomeSwiper,HomeIcons,HomeRecommend}
 }
 </script>
 
