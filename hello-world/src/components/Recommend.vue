@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .recommend-title{
     line-height : .8rem;
     background : #eee;
