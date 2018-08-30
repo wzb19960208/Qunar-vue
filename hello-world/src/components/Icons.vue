@@ -13,9 +13,7 @@
 <script>
 export default {
   name : 'HomeIcons',
-  props:{
-    iconList:Array
-  },
+  props:['iconList'],
   data(){
     return {
 

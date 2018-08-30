@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--使用header组件-->
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <!--使用swiper组件-->
     <home-swiper :swiperList="swiperList"></home-swiper>
     <home-icons :iconList="iconList"></home-icons>

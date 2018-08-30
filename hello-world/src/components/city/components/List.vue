@@ -7,7 +7,7 @@
       <div class="button-list">
         <!--具体的按钮-->
         <div class="button-wrap">
-          <div class="button">北京</div>
+          <div class="button">{{this.$store.state.city}}</div>
         </div>
       </div>
     </div>
@@ -16,25 +16,25 @@
       <div class="title">热门城市</div>
       <div class="button-list">
         <div class="button-wrap">
-          <div class="button">北京</div>
+          <div class="button" @click="handleClick">北京</div>
         </div>
         <div class="button-wrap">
-          <div class="button">上海</div>
+          <div class="button" @click="handleClick">上海</div>
         </div>
         <div class="button-wrap">
-          <div class="button">杭州</div>
+          <div class="button" @click="handleClick">杭州</div>
         </div>
         <div class="button-wrap">
-          <div class="button">香港</div>
+          <div class="button" @click="handleClick">香港</div>
         </div>
         <div class="button-wrap">
-          <div class="button">苏州</div>
+          <div class="button" @click="handleClick">苏州</div>
         </div>
         <div class="button-wrap">
-          <div class="button">成都</div>
+          <div class="button" @click="handleClick">成都</div>
         </div>
         <div class="button-wrap">
-          <div class="button">北京</div>
+          <div class="button" @click="handleClick">深圳</div>
         </div>
       </div>
     </div>
@@ -111,7 +111,15 @@
 
 <script>
 export default {
-  name : 'CityList'
+  name : 'CityList',
+  methods:{
+    handleClick(event){
+      console.log(event.srcElement.innerHTML);
+      var city = event.srcElement.innerHTML;
+      this.$store.dispatch('changeCity',city);
+      this.$router.push('/');
+    }
+  }
 }
 </script>
 

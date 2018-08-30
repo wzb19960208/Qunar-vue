@@ -18,9 +18,7 @@
 <script>
   export default{
     name : 'HomeSwiper',
-    props:{
-      swiperList:Array
-    },
+    props:['swiperList'],
     // es6写法
     data(){
       return {
