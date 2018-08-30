@@ -11,6 +11,7 @@
         </div>
       </div>
     </div>
+
     <div class="area">
       <div class="title">热门城市</div>
       <div class="button-list">
@@ -18,39 +19,91 @@
           <div class="button">北京</div>
         </div>
         <div class="button-wrap">
-          <div class="button">北京</div>
+          <div class="button">上海</div>
         </div>
         <div class="button-wrap">
-          <div class="button">北京</div>
+          <div class="button">杭州</div>
         </div>
         <div class="button-wrap">
-          <div class="button">北京</div>
+          <div class="button">香港</div>
         </div>
         <div class="button-wrap">
-          <div class="button">北京</div>
+          <div class="button">苏州</div>
         </div>
         <div class="button-wrap">
-          <div class="button">北京</div>
+          <div class="button">成都</div>
         </div>
         <div class="button-wrap">
           <div class="button">北京</div>
         </div>
       </div>
     </div>
+
     <div class="area">
-      <div class="title">A</div>
+      <!--标题-->
+      <div class="title">字母排序</div>
+      <!--按钮列表，因为可能很多按钮-->
+      <div class="button-list">
+        <!--具体的按钮-->
+        <div class="button-wrap">
+          <div class="button"><a href="#A">A</a></div>
+        </div>
+        <div class="button-wrap">
+          <div class="button"><a href="#B">B</a></div>
+        </div>
+        <div class="button-wrap">
+          <div class="button"><a href="#C">C</a></div>
+        </div>
+        <div class="button-wrap">
+          <div class="button"><a href="#D">D</a></div>
+        </div>
+        <div class="button-wrap">
+          <div class="button"><a href="#E">E</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="area">
+      <div class="title"><a name="A" href="javascript:void(0)">A</a></div>
       <div class="item-list">
-        <div class="item">阿尔巴尼亚</div>
-        <div class="item">阿尔巴尼亚</div>
-        <div class="item">阿尔巴尼亚</div>
+        <div class="item">澳门</div>
+        <div class="item">安康</div>
+        <div class="item">安庆</div>
       </div>
     </div>
     <div class="area">
-      <div class="title">B</div>
+      <div class="title"><a name="B" href="javascript:void(0)">B</a></div>
       <div class="item-list">
-        <div class="item">阿尔巴尼亚</div>
-        <div class="item">阿尔巴尼亚</div>
-        <div class="item">阿尔巴尼亚</div>
+        <div class="item">保定</div>
+        <div class="item">宝鸡</div>
+        <div class="item">包头</div>
+        <div class="item">蚌埠</div>
+        <div class="item">毫州</div>
+        <div class="item">百色</div>
+      </div>
+    </div>
+    <div class="area">
+      <div class="title"><a name="C" href="javascript:void(0)">C</a></div>
+      <div class="item-list">
+        <div class="item">沧州</div>
+        <div class="item">常德</div>
+        <div class="item">重庆</div>
+      </div>
+    </div>
+    <div class="area">
+      <div class="title"><a name="D" href="javascript:void(0)">D</a></div>
+      <div class="item-list">
+        <div class="item">达州</div>
+        <div class="item">大连</div>
+        <div class="item">德阳</div>
+      </div>
+    </div>
+    <div class="area">
+      <div class="title"><a name="E" href="javascript:void(0)">E</a></div>
+      <div class="item-list">
+        <div class="item">鄂尔多斯</div>
+        <div class="item">鄂州</div>
+        <div class="item">恩施</div>
       </div>
     </div>
   </div>
@@ -75,9 +128,13 @@ export default {
     border-top: #ccc 1px solid;
   }
 
+  .title a{
+    color: #666;
+  }
+
   .button-list{
     overflow: hidden;
-    padding: .1rem .6rem .1rem .1rem;
+    padding: .1rem;
   }
 
   .button-wrap{
@@ -91,6 +148,10 @@ export default {
     text-align: center;
     border: .02rem solid #ccc;
     border-radius: .06rem;
+  }
+
+  .button a{
+    color: #666;
   }
 
   .item{
