@@ -2,7 +2,7 @@
   <div>
     <city-header></city-header>
     <city-search :city="city"></city-search>
-    <city-list></city-list>
+    <city-list :city="city"></city-list>
   </div>
 </template>
 

@@ -10,6 +10,7 @@
       {"id":"006","name":"成都","spell":"chengdu"},
       {"id":"007","name":"深圳","spell":"shenzhen"}
     ],
+    "alpha":["A","B","C","D","E"],
     "all":[
       {
         "type":"A",

@@ -15,26 +15,10 @@
     <div class="area">
       <div class="title">热门城市</div>
       <div class="button-list">
-        <div class="button-wrap">
-          <div class="button" @click="handleClick">北京</div>
-        </div>
-        <div class="button-wrap">
-          <div class="button" @click="handleClick">上海</div>
-        </div>
-        <div class="button-wrap">
-          <div class="button" @click="handleClick">杭州</div>
-        </div>
-        <div class="button-wrap">
-          <div class="button" @click="handleClick">香港</div>
-        </div>
-        <div class="button-wrap">
-          <div class="button" @click="handleClick">苏州</div>
-        </div>
-        <div class="button-wrap">
-          <div class="button" @click="handleClick">成都</div>
-        </div>
-        <div class="button-wrap">
-          <div class="button" @click="handleClick">深圳</div>
+        <div class="button-wrap"
+             v-for="item of city.hot"
+             :key="item.id">
+          <div class="button" @click="handleClick">{{item.name}}</div>
         </div>
       </div>
     </div>
@@ -45,73 +29,32 @@
       <!--按钮列表，因为可能很多按钮-->
       <div class="button-list">
         <!--具体的按钮-->
-        <div class="button-wrap">
-          <div class="button"><a href="#A">A</a></div>
-        </div>
-        <div class="button-wrap">
-          <div class="button"><a href="#B">B</a></div>
-        </div>
-        <div class="button-wrap">
-          <div class="button"><a href="#C">C</a></div>
-        </div>
-        <div class="button-wrap">
-          <div class="button"><a href="#D">D</a></div>
-        </div>
-        <div class="button-wrap">
-          <div class="button"><a href="#E">E</a></div>
+        <div class="button-wrap" v-for="item of city.alpha">
+          <!--属性绑定表达式-->
+          <div class="button"><a :href="'#'+item">{{item}}</a></div>
         </div>
       </div>
     </div>
 
-    <div class="area">
-      <div class="title"><a name="A" href="javascript:void(0)">A</a></div>
-      <div class="item-list">
-        <div class="item">澳门</div>
-        <div class="item">安康</div>
-        <div class="item">安庆</div>
+    <!--属于该首字母开头的所有城市-->
+    <template v-for="group of city.all">
+      <div class="area">
+        <div class="title"><a :name="group.type" href="javascript:void(0)">{{group.type}}</a></div>
+        <div class="item-list">
+          <div class="item"
+               v-for="item of group.city"
+               @click="handleClick"
+          >{{item.name}}</div>
+        </div>
       </div>
-    </div>
-    <div class="area">
-      <div class="title"><a name="B" href="javascript:void(0)">B</a></div>
-      <div class="item-list">
-        <div class="item">保定</div>
-        <div class="item">宝鸡</div>
-        <div class="item">包头</div>
-        <div class="item">蚌埠</div>
-        <div class="item">毫州</div>
-        <div class="item">百色</div>
-      </div>
-    </div>
-    <div class="area">
-      <div class="title"><a name="C" href="javascript:void(0)">C</a></div>
-      <div class="item-list">
-        <div class="item">沧州</div>
-        <div class="item">常德</div>
-        <div class="item">重庆</div>
-      </div>
-    </div>
-    <div class="area">
-      <div class="title"><a name="D" href="javascript:void(0)">D</a></div>
-      <div class="item-list">
-        <div class="item">达州</div>
-        <div class="item">大连</div>
-        <div class="item">德阳</div>
-      </div>
-    </div>
-    <div class="area">
-      <div class="title"><a name="E" href="javascript:void(0)">E</a></div>
-      <div class="item-list">
-        <div class="item">鄂尔多斯</div>
-        <div class="item">鄂州</div>
-        <div class="item">恩施</div>
-      </div>
-    </div>
+    </template>
   </div>
 </template>
 
 <script>
 export default {
   name : 'CityList',
+  props:['city'],
   methods:{
     handleClick(event){
       console.log(event.srcElement.innerHTML);
