@@ -27,7 +27,9 @@
     methods:{
       handleScroll(){
         // 每次滑动，这个对象的这个值都会改变
-        var top = document.documentElement.scrollTop;
+        // var top = document.documentElement.scrollTop;
+        var top = document.body.scrollTop;
+        // alert(top);
         if(top > 10){
           this.showAbs = false;
         }else{
