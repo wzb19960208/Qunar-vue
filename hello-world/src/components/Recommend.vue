@@ -2,7 +2,12 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+
+      <router-link
+        :to="'/detail/'+item.id"
+        tag="li"
+        v-for="item in recommendList" :key="item.id"
+        class="item border-bottom">
         <!--图片部分-->
         <!--可以看到，图片都是用一个div去包裹，然后设置div大小，让图片width=100%-->
         <!--图片都选择公网地址-->
@@ -15,7 +20,8 @@
           <p class="item-desc">{{item.desc}}</p>
           <p class="item-price">￥<span>{{item.price}}</span>起</p>
         </div>
-      </li>
+      </router-link>
+
     </ul>
   </div>
 </template>
